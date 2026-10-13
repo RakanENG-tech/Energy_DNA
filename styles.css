@@ -280,3 +280,184 @@ body[dir="rtl"] h2 { letter-spacing: 0; line-height: 1.4; }
   .ticker { justify-content: flex-start; }
   body[dir="rtl"] h1, body[dir="rtl"] h2 { letter-spacing: 0; }
 }
+/* ENERGY DNA — DESIGN REFINEMENT */
+
+.hero {
+    min-height: 580px;
+    padding: 65px 6%;
+    gap: 45px;
+    align-items: center;
+}
+
+.hero-content {
+    min-width: 0;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 5vw, 66px);
+    line-height: 1.12;
+    letter-spacing: -2px;
+    overflow-wrap: normal;
+}
+
+.hero-content > p {
+    max-width: 460px;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+.hero-visual {
+    width: 100%;
+    max-width: 490px;
+    justify-self: end;
+}
+
+.logo-frame {
+    width: 100%;
+    padding: 0;
+    overflow: hidden;
+    background: #020403;
+    border: 1px solid rgba(53, 230, 160, 0.5);
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.35);
+}
+
+.logo-frame img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.section {
+    width: min(1080px, 88%);
+}
+
+.section-label {
+    margin-bottom: 32px;
+}
+
+.split {
+    gap: 55px;
+    align-items: center;
+}
+
+.project {
+    grid-template-columns: 90px minmax(0, 1fr) 24px;
+    gap: 22px;
+    padding: 25px;
+}
+
+.project-content {
+    min-width: 0;
+}
+
+.project-content h3 {
+    font-size: clamp(18px, 2.2vw, 24px);
+    overflow-wrap: break-word;
+}
+
+.project-content p,
+.team p,
+.values p {
+    font-size: 12px;
+    line-height: 1.85;
+}
+
+.values article,
+.team article {
+    min-width: 0;
+}
+
+@media (max-width: 760px) {
+    .hero {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        padding: 45px 6%;
+    }
+
+    .hero h1 {
+        font-size: clamp(40px, 10vw, 56px);
+        letter-spacing: -1.5px;
+    }
+
+    .hero-visual {
+        max-width: 520px;
+        justify-self: center;
+    }
+
+    .split {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .project {
+        grid-template-columns: 1fr 24px;
+        gap: 12px;
+        padding: 20px;
+    }
+
+    .project-number {
+        grid-column: 1 / -1;
+    }
+
+    .project-symbol {
+        display: none;
+    }
+
+    .project-content {
+        grid-column: 1;
+    }
+
+    .project-arrow {
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    .values,
+    .team {
+        grid-template-columns: 1fr;
+    }
+
+    .ticker {
+        justify-content: flex-start;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+    }
+}
+
+@media (max-width: 420px) {
+    .header {
+        gap: 10px;
+        padding: 12px 4%;
+    }
+
+    .brand span {
+        font-size: 12px;
+    }
+
+    .brand small {
+        font-size: 6px;
+    }
+
+    .header nav {
+        gap: 10px;
+    }
+
+    .header nav a {
+        font-size: 10px;
+    }
+
+    .header-actions {
+        gap: 8px;
+    }
+
+    .hero-buttons {
+        gap: 9px;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        padding: 11px 12px;
+        font-size: 11px;
+    }
+}
