@@ -610,3 +610,105 @@ body[dir="rtl"] h2 { letter-spacing: 0; line-height: 1.4; }
         gap: 20px;
     }
 }
+/* ENERGY DNA — FINAL PROJECT CARD FIX */
+
+.projects {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 24px !important;
+    width: 100% !important;
+}
+
+.project {
+    display: grid !important;
+    grid-template-columns: 75px minmax(0, 1fr) 24px !important;
+    align-items: center !important;
+    gap: 24px !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    min-height: auto !important;
+    height: auto !important;
+    padding: 30px !important;
+    overflow: hidden !important;
+}
+
+.project-number {
+    grid-column: 1 !important;
+    grid-row: 1 !important;
+    white-space: normal !important;
+    overflow-wrap: normal !important;
+    word-break: normal !important;
+}
+
+.project-symbol {
+    display: none !important;
+}
+
+.project-content {
+    grid-column: 2 !important;
+    grid-row: 1 !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+}
+
+.project-content h3 {
+    display: block !important;
+    width: 100% !important;
+    font-size: clamp(20px, 2.4vw, 28px) !important;
+    line-height: 1.4 !important;
+    white-space: normal !important;
+    overflow-wrap: break-word !important;
+    word-break: normal !important;
+    writing-mode: horizontal-tb !important;
+}
+
+.project-content p {
+    width: 100% !important;
+    max-width: 100% !important;
+    white-space: normal !important;
+    overflow-wrap: break-word !important;
+    word-break: normal !important;
+    writing-mode: horizontal-tb !important;
+    line-height: 1.9 !important;
+}
+
+.project-arrow {
+    grid-column: 3 !important;
+    grid-row: 1 !important;
+    align-self: start !important;
+}
+
+.project .tags {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+}
+
+.project .tags span {
+    white-space: normal !important;
+    overflow-wrap: normal !important;
+}
+
+@media (max-width: 650px) {
+    .project {
+        grid-template-columns: minmax(0, 1fr) 24px !important;
+        gap: 12px !important;
+        padding: 22px !important;
+    }
+
+    .project-number {
+        grid-column: 1 / -1 !important;
+        grid-row: 1 !important;
+    }
+
+    .project-content {
+        grid-column: 1 !important;
+        grid-row: 2 !important;
+    }
+
+    .project-arrow {
+        grid-column: 2 !important;
+        grid-row: 2 !important;
+    }
+}
