@@ -461,3 +461,152 @@ body[dir="rtl"] h2 { letter-spacing: 0; line-height: 1.4; }
         font-size: 11px;
     }
 }
+/* ENERGY DNA — PROJECT LAYOUT FIX */
+
+.projects {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 22px;
+    margin-top: 45px;
+}
+
+.project {
+    display: grid;
+    grid-template-columns: 90px minmax(0, 1fr) 24px;
+    align-items: center;
+    gap: 25px;
+    min-height: 0;
+    padding: 30px;
+    background: linear-gradient(120deg, #0d1912, #080e0a);
+    border: 1px solid rgba(53, 230, 160, 0.2);
+    overflow: hidden;
+}
+
+.project-number {
+    font-size: 10px;
+    color: #8fa797;
+    letter-spacing: 1px;
+}
+
+.project-symbol {
+    display: grid;
+    place-items: center;
+    width: 68px;
+    height: 68px;
+    border: 1px solid rgba(53, 230, 160, 0.3);
+    border-radius: 50%;
+    background: rgba(53, 230, 160, 0.06);
+    color: #35e6a0;
+    font-size: 34px;
+}
+
+.project-content {
+    min-width: 0;
+    width: 100%;
+}
+
+.project-content h3 {
+    margin: 10px 0;
+    font-size: clamp(19px, 2.2vw, 27px);
+    line-height: 1.35;
+    overflow-wrap: anywhere;
+}
+
+.project-content p {
+    max-width: 680px;
+    font-size: 13px;
+    line-height: 1.9;
+    overflow-wrap: anywhere;
+}
+
+.project-arrow {
+    align-self: start;
+    color: #35e6a0;
+    font-size: 20px;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tags span {
+    font-size: 9px;
+    padding: 5px 9px;
+}
+
+@media (max-width: 650px) {
+    .project {
+        grid-template-columns: minmax(0, 1fr) 24px;
+        gap: 12px;
+        padding: 22px;
+    }
+
+    .project-number {
+        grid-column: 1 / -1;
+    }
+
+    .project-symbol {
+        display: none;
+    }
+
+    .project-content {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .project-arrow {
+        grid-column: 2;
+        grid-row: 2;
+    }
+}
+/* GLOBAL SPACING AND TYPOGRAPHY */
+
+.section,
+.dark-section .section {
+    width: min(1100px, 88%);
+}
+
+.section-label {
+    font-size: 10px;
+    letter-spacing: 1.4px;
+}
+
+.split {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.85fr);
+    gap: 65px;
+}
+
+.hero {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr);
+}
+
+.hero-content,
+.hero-visual {
+    min-width: 0;
+}
+
+.hero-visual {
+    max-width: 490px;
+    justify-self: end;
+}
+
+.hero-visual img {
+    max-width: 100%;
+}
+
+@media (max-width: 760px) {
+    .hero,
+    .split {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-visual {
+        justify-self: center;
+    }
+
+    .split {
+        gap: 20px;
+    }
+}
